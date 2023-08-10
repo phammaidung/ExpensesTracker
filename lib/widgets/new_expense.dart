@@ -139,7 +139,7 @@ class _NewExpenseState extends State<NewExpense> {
                 onPressed: () {
                   Navigator.pop(context);
                 },
-                style: TextButton.styleFrom(foregroundColor: Colors.red),
+                //style: TextButton.styleFrom(foregroundColor: Colors.red),
                 child: const Text('Cancel'),
               ),
               ElevatedButton(
