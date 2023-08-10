@@ -4,28 +4,29 @@ import 'package:expense_tracker/widgets/expenses.dart';
 
 var kColorScheme =
     ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 96, 59, 181));
-var kdarkColorScheme =
-    ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 5, 99, 125));
+var kDarkColorScheme = ColorScheme.fromSeed(
+    brightness: Brightness.dark,
+    seedColor: const Color.fromARGB(255, 5, 99, 125));
 
 void main() {
   runApp(MaterialApp(
       darkTheme: ThemeData.dark().copyWith(
-        brightness: Brightness.dark,
+        //brightness: Brightness.dark,
         useMaterial3: true,
-        colorScheme: kdarkColorScheme,
-        appBarTheme: const AppBarTheme().copyWith(
-            backgroundColor: kdarkColorScheme.onPrimaryContainer,
-            foregroundColor: kdarkColorScheme.primaryContainer),
+        colorScheme: kDarkColorScheme,
+        // appBarTheme: const AppBarTheme().copyWith(
+        //     backgroundColor: kDarkColorScheme.onPrimaryContainer,
+        //     foregroundColor: kDarkColorScheme.primaryContainer),
         cardTheme: const CardTheme().copyWith(
-            color: kdarkColorScheme.secondaryContainer,
+            color: kDarkColorScheme.secondaryContainer,
             margin: const EdgeInsets.symmetric(
               horizontal: 16,
               vertical: 8,
             )),
         elevatedButtonTheme: ElevatedButtonThemeData(
             style: ElevatedButton.styleFrom(
-          backgroundColor: kdarkColorScheme.primaryContainer,
-          foregroundColor: kdarkColorScheme.onPrimaryContainer,
+          backgroundColor: kDarkColorScheme.primaryContainer,
+          foregroundColor: kDarkColorScheme.onPrimaryContainer,
         )),
       ),
       theme: ThemeData().copyWith(
